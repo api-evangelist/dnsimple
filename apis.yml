@@ -3,7 +3,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
 apis:
   - aid: dnsimple:dnsimple
-    name: DNSimple
+    name: DNSimple API
     tags:
       - API
     humanURL: ' https://developer.dnsimple.com/'
