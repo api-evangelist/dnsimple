@@ -1,31 +1,39 @@
 aid: dnsimple
-name: DNSimple
-description: >-
-  Use our API to manage your domainsGet your DNS hosting and domains set up and
-  running quickly. 
-type: Index
-position: Consumer
-access: 3rd-Party
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-tags:
-  - API
-created: '2025-02-09'
-modified: '2025-02-09'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
-specificationVersion: '0.19'
 apis:
   - aid: dnsimple:dnsimple
     name: DNSimple
+    tags:
+      - API
+    humanURL: ' https://developer.dnsimple.com/'
+    properties:
+      - url: ' https://developer.dnsimple.com/'
+        type: Documentation
     description: >-
       Use our API to manage your domainsGet your DNS hosting and domains set up
       and running quickly. 
-    humanURL: ' https://developer.dnsimple.com/'
-    tags:
-      - API
-    properties:
-      - type: Documentation
-        url: ' https://developer.dnsimple.com/'
+name: DNSimple
+tags:
+  - Domains
+  - DNS
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
+created: '2025-02-09'
+modified: '2025-03-02'
+position: Consumer
+description: >-
+  DNSimple is a domain management and DNS hosting service that provides users
+  with a simple and easy way to manage their domain names and DNS settings. With
+  DNSimple, users can register new domain names, transfer existing ones, and
+  easily update DNS records to point their domains to the desired servers. The
+  service also offers features like automatic SSL certificate provisioning,
+  domain forwarding, and email forwarding to help users optimize their online
+  presence. DNSimple aims to make domain management effortless for individuals
+  and businesses, allowing them to focus on building their websites and online
+  businesses without worrying about technical complications.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
+specificationVersion: '0.19'
