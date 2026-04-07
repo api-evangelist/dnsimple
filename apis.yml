@@ -5,8 +5,8 @@ apis:
   - aid: dnsimple:dnsimple
     name: DNSimple API
     tags:
-      - Domains
       - DNS
+      - Domains
     humanURL: ' https://developer.dnsimple.com/'
     properties:
       - url: ' https://developer.dnsimple.com/'
@@ -20,8 +20,8 @@ apis:
       and applications, saving time and effort.
 name: DNSimple
 tags:
-  - Domains
   - DNS
+  - Domains
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
