@@ -16,7 +16,7 @@ DNSimple is a domain management and DNS hosting service that provides users with
 ## Timestamps
 
 - **Created:** 2025-02-09 
-- **Modified:** 2025-03-02 
+- **Modified:** 2026-04-28 
 
 ## APIs
 
@@ -38,5 +38,5 @@ The DNSimple API is a powerful tool that allows users to interact with their DNS
 
 **FN:** Kin Lane
 
-**Email:** info@apievangelist.com
+**Email:** kin@apievangelist.com
 
