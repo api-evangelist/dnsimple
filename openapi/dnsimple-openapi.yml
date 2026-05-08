@@ -1,0 +1,317 @@
+openapi: 3.1.0
+info:
+  title: DNSimple API
+  description: >-
+    The DNSimple API enables programmatic management of domains, DNS zones,
+    records, contacts, and certificates within a DNSimple account.
+  version: "2"
+x-generated-from: https://developer.dnsimple.com/
+x-generated-by: claude-crawl-2026-05-08
+servers:
+  - url: https://api.dnsimple.com/v2
+    description: DNSimple API v2
+security:
+  - bearerAuth: []
+paths:
+  /accounts:
+    get:
+      summary: List accounts
+      operationId: listAccounts
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /whoami:
+    get:
+      summary: Identity whoami
+      operationId: whoami
+      responses:
+        '200':
+          description: Authenticated context
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+  /{account}/domains:
+    get:
+      summary: List domains
+      operationId: listDomains
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+    post:
+      summary: Create domain
+      operationId: createDomain
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Domain'
+      responses:
+        '201':
+          description: Domain created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+  /{account}/domains/{domain}:
+    get:
+      summary: Get domain
+      operationId: getDomain
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Domain'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+    delete:
+      summary: Delete domain
+      operationId: deleteDomain
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Domain'
+      responses:
+        '204':
+          description: Domain deleted
+  /{account}/zones:
+    get:
+      summary: List zones
+      operationId: listZones
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /{account}/zones/{zone}:
+    get:
+      summary: Get zone
+      operationId: getZone
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Zone'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+  /{account}/zones/{zone}/records:
+    get:
+      summary: List zone records
+      operationId: listZoneRecords
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Zone'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+    post:
+      summary: Create zone record
+      operationId: createZoneRecord
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Zone'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZoneRecord'
+      responses:
+        '201':
+          description: Zone record created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+  /{account}/zones/{zone}/records/{record}:
+    get:
+      summary: Get zone record
+      operationId: getZoneRecord
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Zone'
+        - $ref: '#/components/parameters/Record'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+    patch:
+      summary: Update zone record
+      operationId: updateZoneRecord
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Zone'
+        - $ref: '#/components/parameters/Record'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZoneRecord'
+      responses:
+        '200':
+          description: Zone record updated
+    delete:
+      summary: Delete zone record
+      operationId: deleteZoneRecord
+      parameters:
+        - $ref: '#/components/parameters/Account'
+        - $ref: '#/components/parameters/Zone'
+        - $ref: '#/components/parameters/Record'
+      responses:
+        '204':
+          description: Zone record deleted
+  /{account}/contacts:
+    get:
+      summary: List contacts
+      operationId: listContacts
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+    post:
+      summary: Create contact
+      operationId: createContact
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '201':
+          description: Contact created
+  /{account}/certificates:
+    get:
+      summary: List certificates
+      operationId: listCertificates
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+  /{account}/webhooks:
+    get:
+      summary: List webhooks
+      operationId: listWebhooks
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+    post:
+      summary: Create webhook
+      operationId: createWebhook
+      parameters:
+        - $ref: '#/components/parameters/Account'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: true
+      responses:
+        '201':
+          description: Webhook created
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+  parameters:
+    Account:
+      name: account
+      in: path
+      required: true
+      schema:
+        type: string
+    Domain:
+      name: domain
+      in: path
+      required: true
+      schema:
+        type: string
+    Zone:
+      name: zone
+      in: path
+      required: true
+      schema:
+        type: string
+    Record:
+      name: record
+      in: path
+      required: true
+      schema:
+        type: string
+  schemas:
+    Domain:
+      type: object
+      additionalProperties: true
+    ZoneRecord:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pagination:
+          type: object
+          additionalProperties: true
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true

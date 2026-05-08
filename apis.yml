@@ -11,6 +11,8 @@ apis:
     properties:
       - url: ' https://developer.dnsimple.com/'
         type: Documentation
+      - url: openapi/dnsimple-openapi.yml
+        type: OpenAPI
     description: >-
       The DNSimple API is a powerful tool that allows users to interact with their
       DNS management system programmatically. This API enables developers to automate
