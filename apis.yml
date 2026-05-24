@@ -5,6 +5,8 @@ common:
     url: https://github.com/dnsimple
   - type: LinkedIn
     url: https://www.linkedin.com/company/dnsimple
+  - type: LLMsTxt
+    url: https://developer.dnsimple.com/llms.txt
 apis:
   - aid: dnsimple:dnsimple
     name: DNSimple API
