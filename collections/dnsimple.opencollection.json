@@ -1,0 +1,401 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DNSimple API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "List accounts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/accounts"
+      },
+      "docs": "List accounts"
+    },
+    {
+      "info": {
+        "name": "Identity whoami",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/whoami"
+      },
+      "docs": "Identity whoami"
+    },
+    {
+      "info": {
+        "name": "List domains",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/domains",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List domains"
+    },
+    {
+      "info": {
+        "name": "Create domain",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.dnsimple.com/v2/:account/domains",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create domain"
+    },
+    {
+      "info": {
+        "name": "Get domain",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/domains/:domain",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "domain",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get domain"
+    },
+    {
+      "info": {
+        "name": "Delete domain",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.dnsimple.com/v2/:account/domains/:domain",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "domain",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete domain"
+    },
+    {
+      "info": {
+        "name": "List zones",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/zones",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List zones"
+    },
+    {
+      "info": {
+        "name": "Get zone",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/zones/:zone",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "zone",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get zone"
+    },
+    {
+      "info": {
+        "name": "List zone records",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "zone",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List zone records"
+    },
+    {
+      "info": {
+        "name": "Create zone record",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "zone",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create zone record"
+    },
+    {
+      "info": {
+        "name": "Get zone record",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records/:record",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "zone",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "record",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get zone record"
+    },
+    {
+      "info": {
+        "name": "Update zone record",
+        "type": "http"
+      },
+      "http": {
+        "method": "PATCH",
+        "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records/:record",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "zone",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "record",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update zone record"
+    },
+    {
+      "info": {
+        "name": "Delete zone record",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records/:record",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "zone",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "record",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete zone record"
+    },
+    {
+      "info": {
+        "name": "List contacts",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/contacts",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List contacts"
+    },
+    {
+      "info": {
+        "name": "Create contact",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.dnsimple.com/v2/:account/contacts",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create contact"
+    },
+    {
+      "info": {
+        "name": "List certificates",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/certificates",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List certificates"
+    },
+    {
+      "info": {
+        "name": "List webhooks",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.dnsimple.com/v2/:account/webhooks",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "List webhooks"
+    },
+    {
+      "info": {
+        "name": "Create webhook",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.dnsimple.com/v2/:account/webhooks",
+        "params": [
+          {
+            "name": "account",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create webhook"
+    }
+  ],
+  "bundled": true
+}
