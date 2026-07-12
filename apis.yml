@@ -1,12 +1,18 @@
 aid: dnsimple
 url: https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
 common:
+  - type: DomainSecurity
+    url: security/dnsimple-domain-security.yml
+  - type: Authentication
+    url: authentication/dnsimple-authentication.yml
   - type: GitHubOrganization
     url: https://github.com/dnsimple
   - type: LinkedIn
     url: https://www.linkedin.com/company/dnsimple
   - type: LlmsText
     url: https://developer.dnsimple.com/llms.txt
+  - url: https://blog.dnsimple.com/feed.xml
+    type: Blog
 apis:
   - aid: dnsimple:dnsimple
     name: DNSimple API
