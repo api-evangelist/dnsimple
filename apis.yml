@@ -1,6 +1,8 @@
 aid: dnsimple
 url: https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/dnsimple-agentic-access.yml
   - type: DomainSecurity
     url: security/dnsimple-domain-security.yml
   - type: Authentication
