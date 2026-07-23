@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: DNSimple Accounts Whoami API
+  description: The DNSimple API enables programmatic management of domains, DNS zones, records, contacts, and certificates within a DNSimple account.
+  version: '2'
+servers:
+- url: https://api.dnsimple.com/v2
+  description: DNSimple API v2
+security:
+- bearerAuth: []
+tags:
+- name: Whoami
+paths:
+  /whoami:
+    get:
+      summary: Identity whoami
+      operationId: whoami
+      responses:
+        '200':
+          description: Authenticated context
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+      tags:
+      - Whoami
+components:
+  schemas:
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+x-generated-from: https://developer.dnsimple.com/
+x-generated-by: claude-crawl-2026-05-08

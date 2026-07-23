@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: DNSimple Accounts Certificates API
+  description: The DNSimple API enables programmatic management of domains, DNS zones, records, contacts, and certificates within a DNSimple account.
+  version: '2'
+servers:
+- url: https://api.dnsimple.com/v2
+  description: DNSimple API v2
+security:
+- bearerAuth: []
+tags:
+- name: Certificates
+paths:
+  /{account}/certificates:
+    get:
+      summary: List certificates
+      operationId: listCertificates
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+      tags:
+      - Certificates
+components:
+  parameters:
+    Account:
+      name: account
+      in: path
+      required: true
+      schema:
+        type: string
+  schemas:
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pagination:
+          type: object
+          additionalProperties: true
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+x-generated-from: https://developer.dnsimple.com/
+x-generated-by: claude-crawl-2026-05-08

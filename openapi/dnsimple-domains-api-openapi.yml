@@ -1,0 +1,118 @@
+openapi: 3.1.0
+info:
+  title: DNSimple Accounts Domains API
+  description: The DNSimple API enables programmatic management of domains, DNS zones, records, contacts, and certificates within a DNSimple account.
+  version: '2'
+servers:
+- url: https://api.dnsimple.com/v2
+  description: DNSimple API v2
+security:
+- bearerAuth: []
+tags:
+- name: Domains
+paths:
+  /{account}/domains:
+    get:
+      summary: List domains
+      operationId: listDomains
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+      tags:
+      - Domains
+    post:
+      summary: Create domain
+      operationId: createDomain
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Domain'
+      responses:
+        '201':
+          description: Domain created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+      tags:
+      - Domains
+  /{account}/domains/{domain}:
+    get:
+      summary: Get domain
+      operationId: getDomain
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Domain'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+      tags:
+      - Domains
+    delete:
+      summary: Delete domain
+      operationId: deleteDomain
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Domain'
+      responses:
+        '204':
+          description: Domain deleted
+      tags:
+      - Domains
+components:
+  schemas:
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pagination:
+          type: object
+          additionalProperties: true
+    Domain:
+      type: object
+      additionalProperties: true
+  parameters:
+    Domain:
+      name: domain
+      in: path
+      required: true
+      schema:
+        type: string
+    Account:
+      name: account
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+x-generated-from: https://developer.dnsimple.com/
+x-generated-by: claude-crawl-2026-05-08

@@ -1,0 +1,177 @@
+openapi: 3.1.0
+info:
+  title: DNSimple Accounts Zones API
+  description: The DNSimple API enables programmatic management of domains, DNS zones, records, contacts, and certificates within a DNSimple account.
+  version: '2'
+servers:
+- url: https://api.dnsimple.com/v2
+  description: DNSimple API v2
+security:
+- bearerAuth: []
+tags:
+- name: Zones
+paths:
+  /{account}/zones:
+    get:
+      summary: List zones
+      operationId: listZones
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+      tags:
+      - Zones
+  /{account}/zones/{zone}:
+    get:
+      summary: Get zone
+      operationId: getZone
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Zone'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+      tags:
+      - Zones
+  /{account}/zones/{zone}/records:
+    get:
+      summary: List zone records
+      operationId: listZoneRecords
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Zone'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Collection'
+      tags:
+      - Zones
+    post:
+      summary: Create zone record
+      operationId: createZoneRecord
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Zone'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZoneRecord'
+      responses:
+        '201':
+          description: Zone record created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+      tags:
+      - Zones
+  /{account}/zones/{zone}/records/{record}:
+    get:
+      summary: Get zone record
+      operationId: getZoneRecord
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Zone'
+      - $ref: '#/components/parameters/Record'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SingleResource'
+      tags:
+      - Zones
+    patch:
+      summary: Update zone record
+      operationId: updateZoneRecord
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Zone'
+      - $ref: '#/components/parameters/Record'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ZoneRecord'
+      responses:
+        '200':
+          description: Zone record updated
+      tags:
+      - Zones
+    delete:
+      summary: Delete zone record
+      operationId: deleteZoneRecord
+      parameters:
+      - $ref: '#/components/parameters/Account'
+      - $ref: '#/components/parameters/Zone'
+      - $ref: '#/components/parameters/Record'
+      responses:
+        '204':
+          description: Zone record deleted
+      tags:
+      - Zones
+components:
+  schemas:
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pagination:
+          type: object
+          additionalProperties: true
+    ZoneRecord:
+      type: object
+      additionalProperties: true
+  parameters:
+    Account:
+      name: account
+      in: path
+      required: true
+      schema:
+        type: string
+    Record:
+      name: record
+      in: path
+      required: true
+      schema:
+        type: string
+    Zone:
+      name: zone
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+x-generated-from: https://developer.dnsimple.com/
+x-generated-by: claude-crawl-2026-05-08
