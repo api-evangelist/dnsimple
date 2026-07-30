@@ -16,29 +16,102 @@ common:
   - url: https://blog.dnsimple.com/feed.xml
     type: Blog
 apis:
-  - aid: dnsimple:dnsimple
-    name: DNSimple API
-    tags:
-      - DNS
-      - Domains
-    humanURL: ' https://developer.dnsimple.com/'
-    properties:
-      - url: ' https://developer.dnsimple.com/'
-        type: Documentation
-      - url: openapi/dnsimple-openapi.yml
-        type: OpenAPI
-    description: >-
-      The DNSimple API is a powerful tool that allows users to interact with their DNS management system
-      programmatically. This API enables developers to automate tasks such as registering and configuring domains,
-      creating and editing DNS records, and managing SSL certificates. By accessing the DNSimple API, users can easily
-      integrate their domain management processes into their existing workflows and applications, saving time and
-      effort.
+- aid: dnsimple:dnsimple-accounts-api
+  name: DNSimple Accounts API
+  description: The Accounts API from DNSimple — 1 operation(s) for accounts.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-accounts-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
+- aid: dnsimple:dnsimple-certificates-api
+  name: DNSimple Certificates API
+  description: The Certificates API from DNSimple — 1 operation(s) for certificates.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Certificates
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-certificates-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
+- aid: dnsimple:dnsimple-contacts-api
+  name: DNSimple Contacts API
+  description: The Contacts API from DNSimple — 1 operation(s) for contacts.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Contacts
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-contacts-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
+- aid: dnsimple:dnsimple-domains-api
+  name: DNSimple Domains API
+  description: The Domains API from DNSimple — 2 operation(s) for domains.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Domains
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-domains-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
+- aid: dnsimple:dnsimple-webhooks-api
+  name: DNSimple Webhooks API
+  description: The Webhooks API from DNSimple — 1 operation(s) for webhooks.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-webhooks-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
+- aid: dnsimple:dnsimple-whoami-api
+  name: DNSimple Whoami API
+  description: The Whoami API from DNSimple — 1 operation(s) for whoami.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Whoami
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-whoami-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
+- aid: dnsimple:dnsimple-zones-api
+  name: DNSimple Zones API
+  description: The Zones API from DNSimple — 4 operation(s) for zones.
+  humanURL: ' https://developer.dnsimple.com/'
+  tags:
+  - Zones
+  properties:
+  - type: OpenAPI
+    url: openapi/dnsimple-zones-api-openapi.yml
+  - type: Documentation
+    url: ' https://developer.dnsimple.com/'
 name: DNSimple
 tags:
   - DNS
   - Domains
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dnsimple.png
 access: 3rd-Party
 created: '2025-02-09'
 modified: '2026-05-19'
