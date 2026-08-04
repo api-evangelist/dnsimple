@@ -1,0 +1,26 @@
+{
+  "provider": "dnsimple",
+  "sources": [
+    "dnsimple-accounts-api-openapi.yml",
+    "dnsimple-certificates-api-openapi.yml",
+    "dnsimple-contacts-api-openapi.yml",
+    "dnsimple-domains-api-openapi.yml",
+    "dnsimple-webhooks-api-openapi.yml",
+    "dnsimple-whoami-api-openapi.yml",
+    "dnsimple-zones-api-openapi.yml"
+  ],
+  "outputs": [
+    "dnsimple-accounts-api-openapi.yml",
+    "dnsimple-certificates-api-openapi.yml",
+    "dnsimple-contacts-api-openapi.yml",
+    "dnsimple-domains-api-openapi.yml",
+    "dnsimple-webhooks-api-openapi.yml",
+    "dnsimple-whoami-api-openapi.yml",
+    "dnsimple-zones-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
