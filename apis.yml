@@ -25,8 +25,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-accounts-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 - aid: dnsimple:dnsimple-certificates-api
   name: DNSimple Certificates API
   description: The Certificates API from DNSimple — 1 operation(s) for certificates.
@@ -36,8 +34,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-certificates-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 - aid: dnsimple:dnsimple-contacts-api
   name: DNSimple Contacts API
   description: The Contacts API from DNSimple — 1 operation(s) for contacts.
@@ -47,8 +43,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-contacts-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 - aid: dnsimple:dnsimple-domains-api
   name: DNSimple Domains API
   description: The Domains API from DNSimple — 2 operation(s) for domains.
@@ -58,8 +52,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-domains-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 - aid: dnsimple:dnsimple-webhooks-api
   name: DNSimple Webhooks API
   description: The Webhooks API from DNSimple — 1 operation(s) for webhooks.
@@ -69,8 +61,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-webhooks-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 - aid: dnsimple:dnsimple-whoami-api
   name: DNSimple Whoami API
   description: The Whoami API from DNSimple — 1 operation(s) for whoami.
@@ -80,8 +70,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-whoami-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 - aid: dnsimple:dnsimple-zones-api
   name: DNSimple Zones API
   description: The Zones API from DNSimple — 4 operation(s) for zones.
@@ -91,8 +79,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/dnsimple-zones-api-openapi.yml
-  - type: Documentation
-    url: ' https://developer.dnsimple.com/'
 name: DNSimple
 tags:
   - DNS
