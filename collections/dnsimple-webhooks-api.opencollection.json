@@ -1,0 +1,64 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DNSimple Accounts Webhooks API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/webhooks",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.dnsimple.com/v2/:account/webhooks",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

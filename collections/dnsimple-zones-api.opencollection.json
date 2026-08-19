@@ -1,0 +1,203 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DNSimple Accounts Zones API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Zones",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List zones",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/zones",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List zones"
+        },
+        {
+          "info": {
+            "name": "Get zone",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/zones/:zone",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "zone",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get zone"
+        },
+        {
+          "info": {
+            "name": "List zone records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "zone",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List zone records"
+        },
+        {
+          "info": {
+            "name": "Create zone record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "zone",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create zone record"
+        },
+        {
+          "info": {
+            "name": "Get zone record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records/:record",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "zone",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "record",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get zone record"
+        },
+        {
+          "info": {
+            "name": "Update zone record",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records/:record",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "zone",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "record",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update zone record"
+        },
+        {
+          "info": {
+            "name": "Delete zone record",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.dnsimple.com/v2/:account/zones/:zone/records/:record",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "zone",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "record",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete zone record"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

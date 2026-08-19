@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DNSimple Accounts Domains API",
+    "version": "2"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Domains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/domains",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List domains"
+        },
+        {
+          "info": {
+            "name": "Create domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.dnsimple.com/v2/:account/domains",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create domain"
+        },
+        {
+          "info": {
+            "name": "Get domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.dnsimple.com/v2/:account/domains/:domain",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "domain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get domain"
+        },
+        {
+          "info": {
+            "name": "Delete domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.dnsimple.com/v2/:account/domains/:domain",
+            "params": [
+              {
+                "name": "account",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "domain",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete domain"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,116 @@
+{
+  "item": [
+    {
+      "id": "1e39f0f9-6fb1-4487-8a91-15b967105789",
+      "name": "Whoami",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8d3f7ef3-712f-47eb-b027-ea4537bd8d1c",
+          "name": "Identity whoami",
+          "request": {
+            "name": "Identity whoami",
+            "description": {},
+            "url": {
+              "path": [
+                "whoami"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "27ceb70b-1ca9-4b10-b589-9243d96def54",
+              "name": "Authenticated context",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "whoami"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": {\n    \"key_0\": false\n  },\n  \"key_0\": 4078,\n  \"key_1\": \"string\",\n  \"key_2\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.dnsimple.com/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5ca30e77-41b7-4014-9cb8-cc970d1e7082",
+    "name": "DNSimple Accounts Whoami API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The DNSimple API enables programmatic management of domains, DNS zones, records, contacts, and certificates within a DNSimple account.",
+      "type": "text/plain"
+    }
+  }
+}
