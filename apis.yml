@@ -21,6 +21,8 @@ apis:
   description: The Accounts API from DNSimple — 1 operation(s) for accounts.
   humanURL: ' https://developer.dnsimple.com/'
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -57,6 +59,8 @@ apis:
   description: The Webhooks API from DNSimple — 1 operation(s) for webhooks.
   humanURL: ' https://developer.dnsimple.com/'
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
