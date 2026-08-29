@@ -1,6 +1,9 @@
 aid: dnsimple
 url: https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/dnsimple-capability-edges.yml
+    name: DNSimple Business Capability Map
   - type: AgenticAccess
     url: agentic-access/dnsimple-agentic-access.yml
   - type: DomainSecurity

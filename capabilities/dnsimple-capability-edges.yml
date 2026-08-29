@@ -1,0 +1,24 @@
+slug: dnsimple
+provider: DNSimple
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 1
+edges:
+- tag: Zones
+  spec_file: dnsimple-zones-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.7
+  evidence: GET /{account}/zones/{zone}/records listZoneRecords; PATCH .../records/{record} updateZoneRecord
+  reason: Full CRUD over DNS zones and resource records is configuration of network name-resolution infrastructure,
+    i.e. IT infrastructure management.
