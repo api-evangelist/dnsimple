@@ -1,6 +1,10 @@
 aid: dnsimple
 url: https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
 common:
+  - type: Pricing
+    url: https://dnsimple.com/pricing
+  - type: Plans
+    url: plans/dnsimple-plans-pricing.yml
   - type: Website
     url: https://www.dnsimple.com/
   - type: CapabilityMap
