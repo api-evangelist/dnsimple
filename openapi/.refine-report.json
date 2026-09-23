@@ -1,13 +1,7 @@
 {
   "provider": "dnsimple",
   "sources": [
-    "dnsimple-accounts-api-openapi.yml",
-    "dnsimple-certificates-api-openapi.yml",
-    "dnsimple-contacts-api-openapi.yml",
-    "dnsimple-domains-api-openapi.yml",
-    "dnsimple-webhooks-api-openapi.yml",
-    "dnsimple-whoami-api-openapi.yml",
-    "dnsimple-zones-api-openapi.yml"
+    "_ae-authored/dnsimple-openapi.yml"
   ],
   "outputs": [
     "dnsimple-accounts-api-openapi.yml",
@@ -21,6 +15,43 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "dnsimple-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "dnsimple-openapi.yml: tagged paths GET /accounts -> Accounts",
+    "dnsimple-openapi.yml: tagged paths GET /whoami -> Whoami",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/domains -> Domains",
+    "dnsimple-openapi.yml: tagged paths POST /{account}/domains -> Domains",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/domains/{domain} -> Domains",
+    "dnsimple-openapi.yml: tagged paths DELETE /{account}/domains/{domain} -> Domains",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/zones -> Zones",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/zones/{zone} -> Zones",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/zones/{zone}/records -> Zones",
+    "dnsimple-openapi.yml: tagged paths POST /{account}/zones/{zone}/records -> Zones",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/zones/{zone}/records/{record} -> Zones",
+    "dnsimple-openapi.yml: tagged paths PATCH /{account}/zones/{zone}/records/{record} -> Zones",
+    "dnsimple-openapi.yml: tagged paths DELETE /{account}/zones/{zone}/records/{record} -> Zones",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/contacts -> Contacts",
+    "dnsimple-openapi.yml: tagged paths POST /{account}/contacts -> Contacts",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/certificates -> Certificates",
+    "dnsimple-openapi.yml: tagged paths GET /{account}/webhooks -> Webhooks",
+    "dnsimple-openapi.yml: tagged paths POST /{account}/webhooks -> Webhooks",
+    "dnsimple-openapi.yml: declared missing tag: Accounts",
+    "dnsimple-openapi.yml: declared missing tag: Certificates",
+    "dnsimple-openapi.yml: declared missing tag: Contacts",
+    "dnsimple-openapi.yml: declared missing tag: Domains",
+    "dnsimple-openapi.yml: declared missing tag: Webhooks",
+    "dnsimple-openapi.yml: declared missing tag: Whoami",
+    "dnsimple-openapi.yml: declared missing tag: Zones",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "dnsimple-accounts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dnsimple-certificates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dnsimple-contacts-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dnsimple-domains-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dnsimple-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dnsimple-whoami-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "dnsimple-zones-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
