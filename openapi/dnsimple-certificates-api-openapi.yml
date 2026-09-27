@@ -27,6 +27,13 @@ paths:
       tags:
       - Certificates
 components:
+  parameters:
+    Account:
+      name: account
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
     Collection:
       type: object
@@ -40,13 +47,6 @@ components:
         pagination:
           type: object
           additionalProperties: true
-  parameters:
-    Account:
-      name: account
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     bearerAuth:
       type: http

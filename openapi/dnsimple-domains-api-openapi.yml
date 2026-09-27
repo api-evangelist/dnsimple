@@ -74,6 +74,29 @@ paths:
       tags:
       - Domains
 components:
+  schemas:
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+    Domain:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pagination:
+          type: object
+          additionalProperties: true
   parameters:
     Domain:
       name: domain
@@ -87,29 +110,6 @@ components:
       required: true
       schema:
         type: string
-  schemas:
-    Collection:
-      type: object
-      additionalProperties: true
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            additionalProperties: true
-        pagination:
-          type: object
-          additionalProperties: true
-    SingleResource:
-      type: object
-      additionalProperties: true
-      properties:
-        data:
-          type: object
-          additionalProperties: true
-    Domain:
-      type: object
-      additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http

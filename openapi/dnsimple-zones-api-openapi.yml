@@ -127,29 +127,6 @@ paths:
       tags:
       - Zones
 components:
-  schemas:
-    Collection:
-      type: object
-      additionalProperties: true
-      properties:
-        data:
-          type: array
-          items:
-            type: object
-            additionalProperties: true
-        pagination:
-          type: object
-          additionalProperties: true
-    SingleResource:
-      type: object
-      additionalProperties: true
-      properties:
-        data:
-          type: object
-          additionalProperties: true
-    ZoneRecord:
-      type: object
-      additionalProperties: true
   parameters:
     Account:
       name: account
@@ -169,6 +146,29 @@ components:
       required: true
       schema:
         type: string
+  schemas:
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true
+    ZoneRecord:
+      type: object
+      additionalProperties: true
+    Collection:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+        pagination:
+          type: object
+          additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http
