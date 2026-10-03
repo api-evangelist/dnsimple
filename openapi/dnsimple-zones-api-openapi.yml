@@ -134,14 +134,14 @@ components:
       required: true
       schema:
         type: string
-    Record:
-      name: record
+    Zone:
+      name: zone
       in: path
       required: true
       schema:
         type: string
-    Zone:
-      name: zone
+    Record:
+      name: record
       in: path
       required: true
       schema:
@@ -154,9 +154,6 @@ components:
         data:
           type: object
           additionalProperties: true
-    ZoneRecord:
-      type: object
-      additionalProperties: true
     Collection:
       type: object
       additionalProperties: true
@@ -169,6 +166,9 @@ components:
         pagination:
           type: object
           additionalProperties: true
+    ZoneRecord:
+      type: object
+      additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http

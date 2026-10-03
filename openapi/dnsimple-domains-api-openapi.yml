@@ -75,6 +75,9 @@ paths:
       - Domains
 components:
   schemas:
+    Domain:
+      type: object
+      additionalProperties: true
     SingleResource:
       type: object
       additionalProperties: true
@@ -82,9 +85,6 @@ components:
         data:
           type: object
           additionalProperties: true
-    Domain:
-      type: object
-      additionalProperties: true
     Collection:
       type: object
       additionalProperties: true
@@ -98,14 +98,14 @@ components:
           type: object
           additionalProperties: true
   parameters:
-    Domain:
-      name: domain
+    Account:
+      name: account
       in: path
       required: true
       schema:
         type: string
-    Account:
-      name: account
+    Domain:
+      name: domain
       in: path
       required: true
       schema:
