@@ -128,8 +128,8 @@ paths:
       - Zones
 components:
   parameters:
-    Account:
-      name: account
+    Record:
+      name: record
       in: path
       required: true
       schema:
@@ -140,20 +140,13 @@ components:
       required: true
       schema:
         type: string
-    Record:
-      name: record
+    Account:
+      name: account
       in: path
       required: true
       schema:
         type: string
   schemas:
-    SingleResource:
-      type: object
-      additionalProperties: true
-      properties:
-        data:
-          type: object
-          additionalProperties: true
     Collection:
       type: object
       additionalProperties: true
@@ -169,6 +162,13 @@ components:
     ZoneRecord:
       type: object
       additionalProperties: true
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
+          type: object
+          additionalProperties: true
   securitySchemes:
     bearerAuth:
       type: http

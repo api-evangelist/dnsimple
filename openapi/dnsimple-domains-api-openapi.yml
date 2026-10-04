@@ -75,16 +75,6 @@ paths:
       - Domains
 components:
   schemas:
-    Domain:
-      type: object
-      additionalProperties: true
-    SingleResource:
-      type: object
-      additionalProperties: true
-      properties:
-        data:
-          type: object
-          additionalProperties: true
     Collection:
       type: object
       additionalProperties: true
@@ -95,6 +85,16 @@ components:
             type: object
             additionalProperties: true
         pagination:
+          type: object
+          additionalProperties: true
+    Domain:
+      type: object
+      additionalProperties: true
+    SingleResource:
+      type: object
+      additionalProperties: true
+      properties:
+        data:
           type: object
           additionalProperties: true
   parameters:
