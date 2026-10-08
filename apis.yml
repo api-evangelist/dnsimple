@@ -1,6 +1,10 @@
 aid: dnsimple
 url: https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml
 common:
+  - type: RateLimits
+    url: rate-limits/dnsimple-rate-limits.yml
+  - type: FinOps
+    url: finops/dnsimple-finops.yml
   - type: Pricing
     url: https://dnsimple.com/pricing
   - type: Plans
