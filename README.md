@@ -1,4 +1,4 @@
-# DNSimple (dnsimple)
+# DNSimple
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,51 +66,129 @@
 
 DNSimple is a domain management and DNS hosting service that provides users with a simple and easy way to manage their domain names and DNS settings. With DNSimple, users can register new domain names, transfer existing ones, and easily update DNS records to point their domains to the desired servers. The service also offers features like automatic SSL certificate provisioning, domain forwarding, and email forwarding to help users optimize their online presence.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/dnsimple/refs/heads/main/apis.yml)
+**Areas:** DNS · Domains
 
-## Scope
+## DNSimple on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for DNSimple is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/dnsimple/](https://apis.io/providers/dnsimple/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- DNS
-- Domains
+- [DNSimple Accounts API](https://apis.io/apis/dnsimple/dnsimple-accounts-api/) — The Accounts API from DNSimple — 1 operation(s) for accounts.
+- [DNSimple Certificates API](https://apis.io/apis/dnsimple/dnsimple-certificates-api/) — The Certificates API from DNSimple — 1 operation(s) for certificates.
+- [DNSimple Contacts API](https://apis.io/apis/dnsimple/dnsimple-contacts-api/) — The Contacts API from DNSimple — 1 operation(s) for contacts.
+- [DNSimple Domains API](https://apis.io/apis/dnsimple/dnsimple-domains-api/) — The Domains API from DNSimple — 2 operation(s) for domains.
+- [DNSimple Webhooks API](https://apis.io/apis/dnsimple/dnsimple-webhooks-api/) — The Webhooks API from DNSimple — 1 operation(s) for webhooks.
+- [DNSimple Whoami API](https://apis.io/apis/dnsimple/dnsimple-whoami-api/) — The Whoami API from DNSimple — 1 operation(s) for whoami.
+- [DNSimple Zones API](https://apis.io/apis/dnsimple/dnsimple-zones-api/) — The Zones API from DNSimple — 4 operation(s) for zones.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-09
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### DNSimple API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The DNSimple API is a powerful tool that allows users to interact with their DNS management system programmatically. This API enables developers to automate tasks such as registering and configuring domains, creating and editing DNS records, and managing SSL certificates. By accessing the DNSimple API, users can easily integrate their domain management processes into their existing workflows and applications, saving time and effort.
+- [Dnsimple Agentic Access](https://apis.io/agentic-access/dnsimple/dnsimple-agentic-access/)
 
-- **Human URL:** [ https://developer.dnsimple.com/]( https://developer.dnsimple.com/)
+#### Collections (8)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- DNS
-- Domains
+- [DNSimple API](https://apis.io/collections/dnsimple/open-dnsimple/)
+- [DNSimple Accounts API](https://apis.io/collections/dnsimple/open-dnsimple-accounts-api/)
+- [DNSimple Accounts Certificates API](https://apis.io/collections/dnsimple/open-dnsimple-certificates-api/)
+- [DNSimple Accounts Contacts API](https://apis.io/collections/dnsimple/open-dnsimple-contacts-api/)
+- [DNSimple Accounts Domains API](https://apis.io/collections/dnsimple/open-dnsimple-domains-api/)
+- [DNSimple Accounts Webhooks API](https://apis.io/collections/dnsimple/open-dnsimple-webhooks-api/)
+- [DNSimple Accounts Whoami API](https://apis.io/collections/dnsimple/open-dnsimple-whoami-api/)
+- [DNSimple Accounts Zones API](https://apis.io/collections/dnsimple/open-dnsimple-zones-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation]( https://developer.dnsimple.com/)
-- [OpenAPI](openapi/dnsimple-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/dnsimple.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/dnsimple.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Dnsimple Authentication](https://apis.io/security/dnsimple/dnsimple-authentication/)
+- [Dnsimple Domain Security](https://apis.io/security/dnsimple/dnsimple-domain-security/)
 
-- [GitHub Organization](https://github.com/dnsimple)
-- [LinkedIn](https://www.linkedin.com/company/dnsimple)
-- [L L Ms Txt](https://developer.dnsimple.com/llms.txt)
+#### Plans and pricing (2)
 
-## Maintainers
+Published plans, tiers and prices.
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+- [Dnsimple Plans Pricing](https://apis.io/plans/dnsimple/dnsimple-plans-pricing/)
+- [Dnsimple Price Estimates](https://apis.io/plans/dnsimple/dnsimple-price-estimates/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Dnsimple Rate Limits](https://apis.io/rate-limits/dnsimple/dnsimple-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Dnsimple Finops](https://apis.io/finops/dnsimple/dnsimple-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.dnsimple.com/)
+- [Pricing](https://dnsimple.com/pricing)
+- [Blog](https://blog.dnsimple.com/feed.xml)
+- [GitHub](https://github.com/dnsimple)
+
+## API Evangelist rating
+
+**Kin Score 28.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 60.7 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 14.3 |
+| Access clarity | 42.1 |
+
+**Agent readiness 17.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/dnsimple/](https://apis.io/providers/dnsimple/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DNSimple: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/dnsimple/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
